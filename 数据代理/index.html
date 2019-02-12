@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>数据代理</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id="code"></div>
+</body>
+<script type="text/javascript" src="../js/vue.js"></script>
+<script>
+  var vm = new Vue({
+    el: '#code',
+    data: {
+      name: 'tiancai9'
+    }
+  })
+  console.log(vm.name, vm) // tiancai9 vm代理对data数据的读操作
+  vm.name = 'xiaoyao' // vm代理对data数据的写操作
+  console.log(vm._data.name, vm.name) // xiaoyao
+</script>
+</html>
