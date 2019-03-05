@@ -1,3 +1,7 @@
+/**
+ * 脏值检查实现双向绑定
+ */
+
 //将数据和节点挂载在一起
 let obj = { msg: new ViewModel(''), name: new ViewModel('') };
 
